@@ -23,7 +23,7 @@ function menu_draw( ... )
    		elseif c_item == 0 then
       		love.graphics.setColor(100, 145, 125, 100)
 	   		love.graphics.print(menus[c_menu][5], 400, 400)
-	   		if love.keyboard.isDown("enter") then
+	   		if love.keyboard.isDown('return') then
 	   			love.event.quit()
 	   		end
       	end
