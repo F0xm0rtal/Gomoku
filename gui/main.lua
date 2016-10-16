@@ -3,14 +3,36 @@ require "game"
 require "opt_manu" 
 
 function love.load()
+	--variables
 	c_menu = 1
 	c_item = 1
+	menus = {{"Solo", "Duo", "Options", "Manual", "Exit",},
+    		{"line1","line2","line3","line4",}}
+
+	--gamestate
 	state = "menu"
+
+	--plateau de jeux
+    p_goban = init_aray()
+    p_goban[10][10] = 2
+
+    --images
+   	i_glados = love.graphics.newImage("img/glados.png")
+
+   	--sound
+    s_main = love.audio.newSource("sound/Portal_2_Soundtrack_-_The_Main_Menu.ogg")
+
+    --game file arbitre
+    f_game = io.open(".game", "w")
+    f_goban = io.open(".plateau", "w")
+    -- f_game:write("")
+    -- f_game:close()
 end
 
 function love.keypressed(k)
 	if k == 'escape' and state == "menu" then
 		love.event.quit()
+		os.remove("test.txt")
 	elseif k == 'up' then
 		c_item = c_item - 1
 		c_item = c_item % 5
@@ -29,6 +51,7 @@ function love.update(t)
 end
 
 function love.draw()
+	s_main:play()
 	if state == "menu" then
 		menu_draw()
 	elseif state == "game" then
@@ -40,4 +63,10 @@ function love.draw()
 	elseif state == "manual" then
 		manu_draw()
 	end
+end
+
+function echap()
+		if love.keyboard.isDown('escape') then
+		state = "menu"
+    end
 end

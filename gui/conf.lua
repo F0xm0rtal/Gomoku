@@ -6,7 +6,7 @@ function love.conf(t)
     t.gammacorrect = false
 
     t.window.title = "Gomoku"
-    t.window.icon = "cake-a-lie.png"
+    t.window.icon = "img/cake-a-lie.png"
     t.window.width = 1080
     t.window.height = 860
     t.window.borderless = false
