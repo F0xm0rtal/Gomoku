@@ -2,7 +2,7 @@
 function opt_draw()
 	echap()
 
-	--option son + regle plus si possible a ajoute + mod épilepsie 
+	--option son + mod épilepsie 
 	love.graphics.setFont(love.graphics.newFont(42))
 	love.graphics.print("OPTI0N", 50, 50)
 	love.graphics.setFont(love.graphics.newFont(12))

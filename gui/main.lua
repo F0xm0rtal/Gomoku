@@ -19,6 +19,10 @@ function love.load()
     --images
    	i_glados = love.graphics.newImage("img/glados.png")
 
+    --font
+    fo_menu = love.graphics.newFont('img/terminal_ldr.ttf', 28)
+    fo_titre = love.graphics.newFont('img/terminal_ldr.ttf', 72)
+
    	--sound
     s_main = love.audio.newSource("sound/Portal_2_Soundtrack_-_The_Main_Menu.ogg")
 
@@ -27,6 +31,8 @@ function love.load()
     f_goban = io.open(".plateau", "w")
     -- f_game:write("")
     -- f_game:close()
+
+	s_main:play()
 end
 
 function love.keypressed(k)
@@ -51,7 +57,6 @@ function love.update(t)
 end
 
 function love.draw()
-	s_main:play()
 	if state == "menu" then
 		menu_draw()
 	elseif state == "game" then
