@@ -7,6 +7,9 @@ function opt_draw()
 	love.graphics.print("OPTI0N", 50, 50)
 	love.graphics.setFont(love.graphics.newFont(12))
 	s_main:setVolume(0.9)
+	if love.keyboard.isDown('space') then
+		opt = "epi"
+	end
 end
 
 function manu_draw()

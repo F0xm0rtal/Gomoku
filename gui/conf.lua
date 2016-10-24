@@ -3,7 +3,7 @@ function love.conf(t)
     --t.version = "0.9.1"
     t.console = false
     t.externalstorage = false
-    t.gammacorrect = false
+    t.gammacorrect = true
 
     t.window.title = "Gomoku"
     t.window.icon = "img/cake-a-lie.png"
