@@ -27,8 +27,8 @@ function love.load()
     s_main = love.audio.newSource("sound/Portal_2_Soundtrack_-_The_Main_Menu.ogg")
 
 	--cursor
-i_cursor = love.mouse.newCursor("img/cursor.png", 0, 0)
-love.mouse.setCursor(i_cursor)
+--i_cursor = love.mouse.newCursor("img/cursor.png", 0, 0)
+--love.mouse.setCursor(i_cursor)
 
     --game file arbitre
     f_game = io.open(".game", "w")
@@ -52,12 +52,6 @@ function love.keypressed(k)
 	end
 end
 
-function love.mousepressed(x, y, button)
-    -- Use a custom cursor when the left mouse button is pressed.
-    if button == 1 then
-        love.graphics.draw(i_glados, 50, 50)
-    end
-end
 
 function love.update(t)
 	if state == "game" or state == "game2" then
