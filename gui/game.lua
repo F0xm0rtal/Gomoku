@@ -13,9 +13,16 @@ function game_draw()
     end
 	for e=1,17 do
 		for i=1,17 do
+		if p_goban[e][i] == 1 then
+			love.graphics.draw(s_white, 70 + 40 * (i-1), 70 + 40 * (e-1), 0, 0.1, 0.1)
+		else if p_goban[e][i] == 2 then
+			love.graphics.draw(s_black, 70 + 40 * (i-1), 70 + 40 * (e-1), 0, 0.1, 0.1)
+		else			
 	    	love.graphics.print(p_goban[e][i], 80 + 40 * (i-1), 80 + 40 * (e-1))	
-    	end
-	end
+    		end
+		end
+end
+end
 end
 
 function init_aray()

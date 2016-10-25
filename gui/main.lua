@@ -18,7 +18,8 @@ function love.load()
 
     --images
    	i_glados = love.graphics.newImage("img/glados.png")
-
+	s_white = love.graphics.newImage("img/white.png")
+	s_black = love.graphics.newImage("img/black.png")
     --font
     fo_menu = love.graphics.newFont('img/terminal_ldr.ttf', 28)
     fo_titre = love.graphics.newFont('img/terminal_ldr.ttf', 72)
