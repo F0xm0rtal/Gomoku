@@ -34,7 +34,7 @@ function pos_tab(x, y)
 	if love.mouse.isDown(1) then
 		for i=1, 17, 1 do
 			for e=1,17 do
-				if x >= 90 + 40 * (i-1) and x <= 110 + 40 * (i-1) and y >= 90 + 40 * (e-1) and y <= 110 + 40 * (e-1) then
+				if x >= 80 + 40 * (i-1) and x <= 120 + 40 * (i-1) and y >= 80 + 40 * (e-1) and y <= 120 + 40 * (e-1) then
 				p_goban[e][i] = 1
 			end
 			end
