@@ -1,16 +1,23 @@
 
 function game_draw()
     echap()
+
     -- coord mouse
     mx, my = love.mouse.getPosition()
-    love.graphics.print(mx, 10, 5)
-    love.graphics.print(my, 10, 25)
+    love.graphics.print(mx, 10, 800)
+    love.graphics.print(my, 10, 825)
+
+    --player and turn
     s_player = s_player.format("%s %u", "Player", turn % 2 + 1)
     s_turn = s_turn.format("%s %u", "Turn ", turn)
     love.graphics.print(s_turn, 800, 5)
     love.graphics.print(s_player, 800, 25)
+
+    --mouse trigger
     pos_tab(mx, my) 
+
     --draw plateau
+    love.graphics.rectangle( "fill", 40, 40, 740, 740, 10, 10)
     for i=1, 750, 40 do
 	love.graphics.line(50, 50+i, 770, 50+i)
 	love.graphics.line(50+i, 50, 50+i, 770)
@@ -19,12 +26,16 @@ function game_draw()
 	for i=1,17 do
 	    if p_goban[e][i] == 1 then
 		love.graphics.draw(s_white, 70 + 40 * (i-1), 70 + 40 * (e-1), 0, 0.1, 0.1)
-	    else if p_goban[e][i] == 2 then
+	    elseif p_goban[e][i] == 2 then
 		love.graphics.draw(s_black, 70 + 40 * (i-1), 70 + 40 * (e-1), 0, 0.1, 0.1)
 	    end
 	end
     end
-end
+
+    if cake then
+	love.graphics.print( "The cake is a lie.", 800, 200)
+    end
+
 end
 
 function init_aray()
