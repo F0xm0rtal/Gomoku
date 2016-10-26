@@ -5,6 +5,10 @@ function game_draw()
     mx, my = love.mouse.getPosition()
     love.graphics.print(mx, 10, 5)
     love.graphics.print(my, 10, 25)
+    s_player = s_player.format("%s %u", "Player", turn % 2 + 1)
+    s_turn = s_turn.format("%s %u", "Turn ", turn)
+    love.graphics.print(s_turn, 800, 5)
+    love.graphics.print(s_player, 800, 25)
     pos_tab(mx, my) 
     --draw plateau
     for i=1, 750, 40 do
@@ -17,8 +21,6 @@ function game_draw()
 		love.graphics.draw(s_white, 70 + 40 * (i-1), 70 + 40 * (e-1), 0, 0.1, 0.1)
 	    else if p_goban[e][i] == 2 then
 		love.graphics.draw(s_black, 70 + 40 * (i-1), 70 + 40 * (e-1), 0, 0.1, 0.1)
-	    else			
-		love.graphics.print(p_goban[e][i], 80 + 40 * (i-1), 80 + 40 * (e-1))	
 	    end
 	end
     end

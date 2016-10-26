@@ -24,7 +24,9 @@ function love.load()
     --font
     fo_menu = love.graphics.newFont('img/terminal_ldr.ttf', 28)
     fo_titre = love.graphics.newFont('img/terminal_ldr.ttf', 72)
-
+    --text
+    s_player = "glados"
+    s_turn = "cake"
    	--sound
     s_main = love.audio.newSource("sound/Portal_2_Soundtrack_-_The_Main_Menu.ogg")
 
