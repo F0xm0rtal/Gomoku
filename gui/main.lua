@@ -9,12 +9,13 @@ function love.load()
 	menus = {{"Solo", "Duo", "Options", "Manual", "Exit",},
     		{"line1","line2","line3","line4",}}
 
+	turn = 1
 	--gamestate
 	state = "menu"
 
 	--plateau de jeux
     p_goban = init_aray()
-    p_goban[10][10] = 2
+    p_goban[9][9] = 2
 
     --images
    	i_glados = love.graphics.newImage("img/glados.png")
