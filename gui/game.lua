@@ -55,20 +55,22 @@ function pos_tab(x, y)
 		for i=1, 17, 1 do
 	    	for e=1,17 do
 				if x >= 80 + 40 * (i-1) and x <= 120 + 40 * (i-1) and y >= 80 + 40 * (e-1) and y <= 120 + 40 * (e-1) then
-		    		if arbitre(p_goban, p_goban[e][i]) == 1 then
-						p_goban[e][i] = turn % 2 + 1
-						turn = turn + 1
-			    	end
+		    		arbitre(p_goban, p_goban[e][i], e, i)
 				end
 		    end
 		end
     end
 end
 
-function arbitre(map, pos)
+function arbitre(map, pos, x, y)
 	if pos == 3 then
-		return 1
-  	else
-		return 0
+		p_goban[x][y] = turn % 2 + 1
+		if p_goban[x][y+1] == 0 then 
+			p_goban[x][y+1] = 3
+		end
+		if p_goban[x][y-1] == 0 then
+			p_goban[x][y-1] = 3
+		end
 	end
+	turn = turn + 1
 end
