@@ -14,7 +14,6 @@ function love.load()
 
     --plateau de jeux
     p_goban = init_aray()
-    p_goban[9][9] = 3
 
     --images
     i_glados = love.graphics.newImage("img/glados.png")
@@ -45,7 +44,7 @@ function love.load()
     -- f_game:write("")
     -- f_game:close()
 
-    -- s_main:play()
+    --s_main:play()
 end
 
 function love.keypressed(k)

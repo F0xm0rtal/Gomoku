@@ -54,5 +54,6 @@ function menu_draw()
             end
         end
         love.graphics.print(menus[c_menu][i], 200, 320 + 20 * i)
+	love.graphics.setColor(255, 255, 255, 255)
     end
 end
