@@ -1,4 +1,3 @@
-
 function game_draw()
     echap()
 
@@ -56,7 +55,7 @@ function pos_tab(x, y)
 	for i=1, 17, 1 do
 	    for e=1,17 do
 		if x >= 80 + 40 * (i-1) and x <= 120 + 40 * (i-1) and y >= 80 + 40 * (e-1) and y <= 120 + 40 * (e-1) then
-		    arbitre(p_goban, p_goban[e][i], e, i)
+		    judge(p_goban, p_goban[e][i], e, i)
 		end
 	    end
 	end
@@ -155,8 +154,10 @@ function imparable(x, y)
 end
 
 
-function arbitre(map, pos, x, y)
+function judge(map, pos, x, y)
     impa = 0
+    arbitre = Arbitre
+    arbitre:SetTurn(turn, goban)
     if pos == 3 then
 	p_goban[x][y] = turn % 2 + 1
 	for i= -1, 1, 1 do
@@ -172,7 +173,7 @@ function arbitre(map, pos, x, y)
 	--check impa
 	for i = 1, 17, 1 do
 	    for j = 1, 17, 1 do
-		if imparable(x,y) == "imparable" then
+		if arbitre:Imparable(x,y) == "imparable" then
 		    print ("imparable")
 		    impa = 1
 		end
@@ -180,8 +181,8 @@ function arbitre(map, pos, x, y)
 	end
 	if impa == 0 then
 	    turn = turn + 1
-	    prise(x, y)
-	    align(x, y)
+	    arbitre:Prise(x, y)
+	    arbitre:Align(x, y)
 	else
 	    p_goban[x][y] = 3
 	end
