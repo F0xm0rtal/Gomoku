@@ -1,3 +1,4 @@
+require '../IA/MinMax'
 function game_draw()
     echap()
 
@@ -13,7 +14,7 @@ function game_draw()
     love.graphics.print(s_player, 800, 25)
 
     --mouse trigger
-    pos_tab(mx, my) 
+    pos_tab(mx, my)
 
     --draw plateau
     love.graphics.draw(i_goban, 30, 50, 0, 0.3, 0.45)
@@ -56,6 +57,8 @@ function pos_tab(x, y)
 	    for e=1,17 do
 		if x >= 80 + 40 * (i-1) and x <= 120 + 40 * (i-1) and y >= 80 + 40 * (e-1) and y <= 120 + 40 * (e-1) then
 		    judge(p_goban, p_goban[e][i], e, i)
+        add_Histo_tab(e,i,(turn % 2) + 1)
+        prise_IA(9,9)
 		end
 	    end
 	end
@@ -68,8 +71,8 @@ function judge(map, pos, x, y)
     if pos == 3 then
 	p_goban[x][y] = turn % 2 + 1
 	for i= -1, 1, 1 do
-	    for j = -1 , 1, 1 do 
-		if x + i < 18 and x + i > 0 and y + j < 18 and y + j > 0 then 
+	    for j = -1 , 1, 1 do
+		if x + i < 18 and x + i > 0 and y + j < 18 and y + j > 0 then
 		    if p_goban[x+i][y+j] == 0 then
 			p_goban[x+i][y+j] = 3
 		    end
@@ -95,4 +98,3 @@ function judge(map, pos, x, y)
 	end
     end
 end
-
