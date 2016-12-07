@@ -12,6 +12,7 @@ function Arbitre.create(_turn, _field)
 end
 
 function Arbitre.Prise(self, x, y)
+    prise = false
     for j = -1, 1, 1 do
 	for i = -1, 1, 1 do
 	    p = 0
@@ -27,17 +28,21 @@ function Arbitre.Prise(self, x, y)
 			if p == 3 then
 			    self.field[x + i][y + j] = 3
 			    self.field[x + 2 * i][y + 2 * j] = 3
-			    return "prise"
+			    prise = true
 			end
 		    end
 		end
 	    end
 	end
     end
+    if prise then
+	return "prise"
+    end
     return "nil"
 end
 
 function Arbitre.Align(self, x, y)
+    --cas "xxxx "
     for j = -1, 1, 1 do
 	for i = -1, 1, 1 do
 	    p = 0
@@ -57,10 +62,18 @@ function Arbitre.Align(self, x, y)
 	    end
 	end
     end
+    --cas "x xxx"
+    --cas "xx xx"
     return "nil"
 end
 
 function Arbitre.Imparable(self, x, y)
+    --cas " 'xx x "
+    --cas " x'x x "
+    --cas " xx 'x "
+    --cas " 'xxx "
+    --cas " x'xx "
+    --cas " xx'x "
     if self.field[x][y] == 3 then
 	for i = -1, 1, 1 do
 	    for j = -1, 1, 1 do
