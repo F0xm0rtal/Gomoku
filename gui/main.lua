@@ -6,7 +6,7 @@ function love.load()
     --variables
     c_menu = 1
     c_item = 1
-    menus = {{"Solo", "Duo", "Options", "Manual", "Exit",}}
+    menus = {"Solo", "Duo", "Options", "Manual", "Exit"}
 
     turn = 1
     --gamestate
