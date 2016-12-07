@@ -1,3 +1,4 @@
+
 function game_draw()
     echap()
 
@@ -32,7 +33,12 @@ function game_draw()
     end
 
     if cake then
-	love.graphics.print( "The cake is a lie.", 800, 200)
+	love.graphics.print( "The cake is a lie.", 810, 200)
+    end
+
+    if win then
+	s_win = s_win.format("%s %u %s","Player", (turn % 2 + 1), "win !")
+	love.graphics.print(s_win, 810, 300)
     end
 
 end
@@ -55,7 +61,9 @@ function pos_tab(x, y)
 	for i=1, 17, 1 do
 	    for e=1,17 do
 		if x >= 80 + 40 * (i-1) and x <= 120 + 40 * (i-1) and y >= 80 + 40 * (e-1) and y <= 120 + 40 * (e-1) then
-		    judge(p_goban, p_goban[e][i], e, i)
+		    if win == false then
+			judge(p_goban, p_goban[e][i], e, i)
+		    end
 		end
 	    end
 	end
@@ -88,11 +96,12 @@ function judge(map, pos, x, y)
 	end
 	if impa == 0 then
 	    arb:Prise(x, y)
-	    arb:Align(x, y)
+	    if arb:Align(x, y) == "win" then
+		win = true
+	    end
 	    turn = turn + 1
 	else
 	    p_goban[x][y] = 3
 	end
     end
 end
-

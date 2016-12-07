@@ -38,20 +38,18 @@ function Arbitre.Prise(self, x, y)
 end
 
 function Arbitre.Align(self, x, y)
-    print ("Player", turn % 2 + 1)
     for j = -1, 1, 1 do
 	for i = -1, 1, 1 do
 	    p = 0
 	    for c = 1, 4, 1 do
 		if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
 		    if not (i == 0 and j == 0) then
-			print ("j", j, "i", i)
-			--print (c * i, c * j)
 			if self.field[x + c * i][y + c * j] == turn % 2 + 1 then
 			    p = p + 1
 			end
 			if p == 4 then
-			    print ("Player",turn % 2 + 1,"win !")
+			    s_win = s_win.format("%s %u %s","Player", (turn % 2 + 1), "win !")
+			    love.graphics.print(s_win, 800, 300)
 			    return "win"
 			end
 		    end

@@ -30,8 +30,9 @@ function love.load()
     --text
     s_player = "init_glados"
     s_turn = "init_cake"
+    s_win = "init_win"
     cake = false
-    
+    win = false
     --sound
     s_main = love.audio.newSource("sound/Portal_2_Soundtrack_-_The_Main_Menu.ogg")
 
@@ -88,7 +89,9 @@ end
 
 function echap()
     if love.keyboard.isDown('escape') then
-		state = "menu"
+	state = "menu"
+	win = false
+	turn = 1
     	p_goban = init_aray()
     end
 end
