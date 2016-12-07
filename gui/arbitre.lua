@@ -49,12 +49,14 @@ function Arbitre.Align(self, x, y)
 			end
 			if p == 4 then
 			    print ("Player",turn % 2 + 1,"win !")
+			    return "win"
 			end
 		    end
 		end
 	    end
 	end
     end
+    return "nil"
 end
 
 function Arbitre.Imparable(self, x, y)
@@ -100,7 +102,7 @@ function Arbitre.Imparable(self, x, y)
 	    end
 	end
     end
-    return "k"
+    return "nil"
 end
 
 
