@@ -1,11 +1,14 @@
 Arbitre = {}
 Arbitre.__index = Arbitre
 
-Arbitre.field = nil
+Arbitre.field = {}
 Arbitre.turn = 0
-function Arbitre.SetTurn(self, _turn, _field)
-    turn = _turn
-    field = _field
+function Arbitre.create(_turn, _field)
+    local arb = {}
+    setmetatable(arb, Arbitre)
+    arb.turn = _turn
+    arb.field = _field
+    return arb
 end
 
 function Arbitre.Prise(self, x, y)

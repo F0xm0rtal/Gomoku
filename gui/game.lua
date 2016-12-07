@@ -156,7 +156,7 @@ end
 
 function judge(map, pos, x, y)
     impa = 0
-    Arbitre:SetTurn(turn, map)
+    arb = Arbitre.create(turn, map)
     if pos == 3 then
 	p_goban[x][y] = turn % 2 + 1
 	for i= -1, 1, 1 do
@@ -172,7 +172,7 @@ function judge(map, pos, x, y)
 	--check impa
 	for i = 1, 17, 1 do
 	    for j = 1, 17, 1 do
-		if Arbitre:Imparable(x,y) == "imparable" then
+		if arb:Imparable(x,y) == "imparable" then
 		    print ("imparable")
 		    impa = 1
 		end
@@ -180,8 +180,8 @@ function judge(map, pos, x, y)
 	end
 	if impa == 0 then
 	    turn = turn + 1
-	    Arbitre:Prise(x, y)
-	    Arbitre:Align(x, y)
+	    arb:Prise(x, y)
+	    arb:Align(x, y)
 	else
 	    p_goban[x][y] = 3
 	end
