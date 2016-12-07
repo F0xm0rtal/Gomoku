@@ -27,24 +27,27 @@ function Arbitre.Prise(self, x, y)
 			if p == 3 then
 			    self.field[x + i][y + j] = 3
 			    self.field[x + 2 * i][y + 2 * j] = 3
+			    return "prise"
 			end
 		    end
 		end
 	    end
 	end
     end
+    return "nil"
 end
 
 function Arbitre.Align(self, x, y)
     print ("Player", turn % 2 + 1)
-    for i = -1, 1, 1 do
-	for j = -1, 1, 1 do
+    for j = -1, 1, 1 do
+	for i = -1, 1, 1 do
 	    p = 0
 	    for c = 1, 4, 1 do
 		if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
-		    if i ~= 0 and j ~= 0 then 
+		    if not (i == 0 and j == 0) then
+			print ("j", j, "i", i)
+			--print (c * i, c * j)
 			if self.field[x + c * i][y + c * j] == turn % 2 + 1 then
-			    print (x + c * i, y + c * j, p)
 			    p = p + 1
 			end
 			if p == 4 then
