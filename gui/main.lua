@@ -1,6 +1,7 @@
 require "menu"
 require "game"
 require "opt_manu" 
+require "arbitre"
 
 function love.load()
     --variables
