@@ -1,6 +1,6 @@
 
 function game_draw()
-
+    
     -- coord mouse
     mx, my = love.mouse.getPosition()
     love.graphics.print(mx, 10, 800)
