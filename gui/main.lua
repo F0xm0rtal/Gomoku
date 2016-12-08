@@ -115,6 +115,7 @@ function echap()
 				win = false
 				turn = 1
 			    p_goban = init_aray()
+                ech = 0
 	    	end
 	    end
 	    if (c_item % 2) == 1 then
