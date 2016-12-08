@@ -1,5 +1,6 @@
 
 function game_draw()
+    love.graphics.setFont(fo_menu)
     -- coord mouse
     mx, my = love.mouse.getPosition()
     love.graphics.print(mx, 10, 800)
