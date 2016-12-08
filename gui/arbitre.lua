@@ -42,9 +42,9 @@ function Arbitre.Prise(self, x, y)
 end
 
 function Arbitre.Align(self, x, y)
-    --cas "xxxx "
     for j = -1, 1, 1 do
 	for i = -1, 1, 1 do
+	    --cas "xxxx "
 	    p = 0
 	    for c = 1, 4, 1 do
 		if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
@@ -53,8 +53,34 @@ function Arbitre.Align(self, x, y)
 			    p = p + 1
 			end
 			if p == 4 then
-			    s_win = s_win.format("%s %u %s","Player", (turn % 2 + 1), "win !")
-			    love.graphics.print(s_win, 800, 300)
+			    return "win"
+			end
+		    end
+		end
+	    end
+	    --cas "x xxx"
+	    p = 0
+	    for c = -1, 3, 1 do
+		if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
+		    if not (i == 0 and j == 0) then
+			if self.field[x + c * i][y + c * j] == turn % 2 + 1 then
+			    p = p + 1
+			end
+			if p == 5 then
+			    return "win"
+			end
+		    end
+		end
+	    end
+	    --cas "xx xx"
+	    p = 0
+	    for c = -2, 2, 1 do
+		if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
+		    if not (i == 0 and j == 0) then
+			if self.field[x + c * i][y + c * j] == turn % 2 + 1 then
+			    p = p + 1
+			end
+			if p == 5 then
 			    return "win"
 			end
 		    end
@@ -62,8 +88,6 @@ function Arbitre.Align(self, x, y)
 	    end
 	end
     end
-    --cas "x xxx"
-    --cas "xx xx"
     return "nil"
 end
 
