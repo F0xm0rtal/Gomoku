@@ -11,12 +11,12 @@ function menu_draw()
     
     --draw menu
     love.graphics.draw(i_glados, 500, 0)
-    for i=1, #menus[c_menu] do
+    for i=1,5,1 do
         if c_item == 1 then
             love.graphics.setColor(128, 128, 128, 255)
             love.graphics.rectangle( "fill", 195, 320 + 20 * c_item, 130, 20 )
             love.graphics.setColor(255, 255, 255, 100)
-            love.graphics.print(menus[c_menu][c_item], 200, 320 + 20 * c_item)
+            love.graphics.print(menus[c_item], 200, 320 + 20 * c_item)
         	if love.keyboard.isDown('return') then
                 state = "game"
             end
@@ -24,7 +24,7 @@ function menu_draw()
             love.graphics.setColor(128, 128, 128, 255)
             love.graphics.rectangle( "fill", 195, 320 + 20 * c_item, 130, 20 )
             love.graphics.setColor(255, 255, 255, 100)
-            love.graphics.print(menus[c_menu][c_item], 200, 320 + 20 * c_item)
+            love.graphics.print(menus[c_item], 200, 320 + 20 * c_item)
         	if love.keyboard.isDown('return') then
                 state = "game"
             end
@@ -32,7 +32,7 @@ function menu_draw()
             love.graphics.setColor(128, 128, 128, 255)
             love.graphics.rectangle( "fill", 195, 320 + 20 * c_item, 130, 20 )
             love.graphics.setColor(255, 255, 255, 100)
-            love.graphics.print(menus[c_menu][c_item], 200, 320 + 20 * c_item)
+            love.graphics.print(menus[c_item], 200, 320 + 20 * c_item)
             if love.keyboard.isDown('return') then
                 state = "option"
             end
@@ -40,7 +40,7 @@ function menu_draw()
             love.graphics.setColor(128, 128, 128, 255)
             love.graphics.rectangle( "fill", 195, 320 + 20 * c_item, 130, 20 )
             love.graphics.setColor(255, 255, 255, 100)
-            love.graphics.print(menus[c_menu][c_item], 200, 320 + 20 * c_item)
+            love.graphics.print(menus[c_item], 200, 320 + 20 * c_item)
             if love.keyboard.isDown('return') then
                 state = "manual"
             end
@@ -48,12 +48,12 @@ function menu_draw()
             love.graphics.setColor(128, 128, 128, 255)
             love.graphics.rectangle( "fill", 195, 420, 130, 20)
             love.graphics.setColor(255, 255, 255, 100)
-            love.graphics.print(menus[c_menu][5], 200, 420)
+            love.graphics.print(menus[5], 200, 420)
             if love.keyboard.isDown('return') then
                 love.event.quit()
             end
         end
-        love.graphics.print(menus[c_menu][i], 200, 320 + 20 * i)
+        love.graphics.print(menus[i], 200, 320 + 20 * i)
 	love.graphics.setColor(255, 255, 255, 255)
     end
 end
