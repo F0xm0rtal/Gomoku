@@ -8,6 +8,7 @@ function love.load()
     c_menu = 1
     c_item = 1
     menus = {"Solo", "Duo", "Options", "Manual", "Exit"}
+    ech = 0
 
     turn = 1
     --gamestate
@@ -53,6 +54,11 @@ function love.keypressed(k)
     if k == 'escape' and state == "menu" then
 		love.event.quit()
 		os.remove("test.txt")
+    elseif k == 'escape' and state ~= "menu" and ech == 0 then
+        ech = 1
+        --love.event.quit()
+    elseif k == 'escape' and state ~= "menu" and ech == 1 then
+        ech = 0
     elseif k == 'up' then
 		c_item = c_item - 1
 		c_item = c_item % 5
@@ -88,7 +94,7 @@ function love.draw()
 end
 
 function echap()
-    	for i=1,10 do
+    for i=1,10 do
 	    love.graphics.setColor(255, 0, 0, 100)
 	    love.graphics.rectangle( "fill", 430, 430, 130, 60)
 	    love.graphics.setColor(255, 255, 255, 100)
