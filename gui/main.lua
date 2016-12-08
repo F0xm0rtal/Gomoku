@@ -11,7 +11,7 @@ function love.load()
     menus = {"Solo", "Duo", "Options", "Manual", "Exit"}
     opt_menu = {"menu", "game", "game2", "option", "manual"}
     ech = 0
-
+    imba = 0
     turn = 1
     --gamestate
     state = "menu"
