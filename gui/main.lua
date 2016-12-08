@@ -56,7 +56,6 @@ function love.keypressed(k)
 		os.remove("test.txt")
     elseif k == 'escape' and state ~= "menu" and ech == 0 then
         ech = 1
-        --love.event.quit()
     elseif k == 'escape' and state ~= "menu" and ech == 1 then
         ech = 0
     elseif k == 'up' then
@@ -81,6 +80,7 @@ end
 
 function love.draw()
     if state == "menu" then
+        ech = 0
 		menu_draw()
     elseif state == "game" then
 		game_draw()
@@ -115,7 +115,6 @@ function echap()
 				win = false
 				turn = 1
 			    p_goban = init_aray()
-                ech = 0
 	    	end
 	    end
 	    if (c_item % 2) == 1 then
