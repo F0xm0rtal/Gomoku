@@ -92,18 +92,30 @@ function Arbitre.Align(self, x, y)
 end
 
 function Arbitre.Imparable(self, x, y)
-    --cas " 'xx x "
-    --cas " x'x x "
-    --cas " xx 'x "
-    --cas " 'xxx "
-    --cas " x'xx "
-    --cas " xx'x "
     if self.field[x][y] == 3 then
 	for i = -1, 1, 1 do
 	    for j = -1, 1, 1 do
-		--cas
+		--pattern " x xx " 
+		--cas " 'xx x "
 		p = 0
-		for c = 1, 4, 1 do
+		for c = -1, 4, 1 do
+		    if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
+			if i ~= x and j ~= y then
+			    if (c == -1 or c == 1 or c == 4) and self.field[x + c * i][y + c * j] == 3 then
+				p = p + 1
+			    end
+			    if (c == 0 or c == 2 or c == 3) and self.field[x + c * i][y + c * j] == turn % 2 + 1 then
+				p = p + 1
+			    end
+			    if p == 6 then
+				return "imparable"
+			    end
+			end
+		    end
+		end
+		--cas " x'x x "
+		p = 0
+		for c = -2, 3, 1 do
 		    if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
 			if i ~= x and j ~= y then
 			    if c ~= 4 and self.field[x + c * i][y + c * j] == turn % 2 + 1 then
@@ -118,9 +130,9 @@ function Arbitre.Imparable(self, x, y)
 			end
 		    end
 		end
-		--cas
+		--cas " 'x xx "
 		p = 0
-		for c = 1, 3, 1 do
+		for c = -1, 4, 3 do
 		    if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
 			if i ~= x and j ~= y then
 			    if c ~= 4 and self.field[x + c * i][y + c * j] == turn % 2 + 1 then
@@ -135,9 +147,10 @@ function Arbitre.Imparable(self, x, y)
 			end
 		    end
 		end
-		--cas
+		--pattern " xxx "
+		--cas " 'xxx "
 		p = 0
-		for c = 1, 3 ,3 do
+		for c = -1, 3, 1 do
 		    if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
 			if i ~= x and j ~= y then
 			    if c ~= 4 and self.field[x + c * i][y + c * j] == turn % 2 + 1 then
@@ -152,43 +165,9 @@ function Arbitre.Imparable(self, x, y)
 			end
 		    end
 		end
-		--cas
+		--cas " x'xx "
 		p = 0
-		for c = 1, 5, 1 do
-		    if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
-			if i ~= x and j ~= y then 
-			    if (c ~= 3 or c ~= 5) and self.field[x + c * i][y + c * j] == turn % 2 + 1 then
-				p = p + 1
-			    end
-			    if (c == 3 or c == 5) and self.field[x + c * i][y + c * j] == 3 then
-				p = p + 1
-			    end
-			    if p == 5 then
-				return "imparable"
-			    end
-			end
-		    end
-		end
-		--cas
-		p = 0
-		for c = 1, 3, 1 do
-		    if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
-			if i ~= x and j ~= y then
-			    if c ~= 4 and self.field[x + c * i][y + c * j] == turn % 2 + 1 then
-				p = p + 1
-			    end
-			    if c == 4 and self.field[x + c * i][y + c * j] == 3 then
-				p = p + 1
-			    end
-			    if p == 4 then
-				return "imparable"
-			    end
-			end
-		    end
-		end
-		--cas
-		p = 0
-		for c = 1, 3, 1 do 
+		for c = -2, 2, 1 do 
 		    if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
 			if i ~= x and j ~= y then
 			    if c ~= 4 and self.field[x + c * i][y + c * j] == turn % 2 + 1 then
