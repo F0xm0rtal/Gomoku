@@ -88,10 +88,32 @@ function love.draw()
 end
 
 function echap()
-    if love.keyboard.isDown('escape') then
-	state = "menu"
-	win = false
-	turn = 1
-    	p_goban = init_aray()
-    end
+    	for i=1,10 do
+	    love.graphics.setColor(255, 0, 0, 100)
+	    love.graphics.rectangle( "fill", 430, 430, 130, 60)
+	    love.graphics.setColor(255, 255, 255, 100)
+	    love.graphics.setFont(love.graphics.newFont(21))
+	    love.graphics.print("Quit ?", 440, 430)
+	    love.graphics.print("YES", 440, 460)
+	    love.graphics.print("/", 482, 460)
+	    love.graphics.print("NOPE", 492, 460)
+	    love.graphics.setColor(0, 0, 0, 100)
+	    if (c_item % 2) == 0 then
+	    	love.graphics.rectangle( "fill", 440, 460, 40, 25)
+	    	if love.keyboard.isDown('return') then
+	    		-- love.event.quit()
+			    state = "menu"
+				win = false
+				turn = 1
+			    p_goban = init_aray()
+	    	end
+	    end
+	    if (c_item % 2) == 1 then
+			love.graphics.rectangle( "fill", 492, 460, 60, 25)
+	    	if love.keyboard.isDown('return') then
+	    		ech = 0
+	    	end
+		end
+	    love.graphics.setColor(255, 255, 255, 255)
+	end
 end
