@@ -7,6 +7,7 @@ function love.load()
     --variables
     c_menu = 1
     c_item = 1
+    c_truc = 1
     menus = {"Solo", "Duo", "Options", "Manual", "Exit"}
     ech = 0
 
@@ -58,11 +59,17 @@ function love.keypressed(k)
         ech = 1
     elseif k == 'escape' and state ~= "menu" and ech == 1 then
         ech = 0
-    elseif k == 'up' then
-		c_item = c_item - 1
-		c_item = c_item % 5
-    elseif k == 'down' then
-		c_item = c_item + 1
+    elseif k == 'left' then
+        c_truc = c_truc - 1
+        c_truc = c_truc % 2
+    elseif k == 'right' then
+        c_truc = c_truc + 1
+        c_truc = c_truc % 2
+    elseif k == 'up' and state == "menu" then
+        c_item = c_item - 1
+        c_item = c_item % 5
+    elseif k == 'down' and state == "menu" then
+        c_item = c_item + 1
 		c_item = c_item % 5
     elseif k == 'c' then
 		cake = not cake
@@ -80,7 +87,6 @@ end
 
 function love.draw()
     if state == "menu" then
-        ech = 0
 		menu_draw()
     elseif state == "game" then
 		game_draw()
@@ -97,7 +103,6 @@ function love.draw()
 end
 
 function echap()
-    for i=1,10 do
 	    love.graphics.setColor(255, 0, 0, 100)
 	    love.graphics.rectangle( "fill", 430, 430, 130, 60)
 	    love.graphics.setColor(255, 255, 255, 100)
@@ -107,22 +112,23 @@ function echap()
 	    love.graphics.print("/", 482, 460)
 	    love.graphics.print("NOPE", 492, 460)
 	    love.graphics.setColor(0, 0, 0, 100)
-	    if (c_item % 2) == 0 then
+	    if c_truc == 0 and state ~= "menu" then
 	    	love.graphics.rectangle( "fill", 440, 460, 40, 25)
-	    	if love.keyboard.isDown('return') then
-	    		-- love.event.quit()
-			    state = "menu"
-				win = false
-				turn = 1
-			    p_goban = init_aray()
+	    	if love.keyboard.isDown('a') and state ~= "menu" then
+	    		--love.event.quit()
+                state = "menu"
+                win = false
+                turn = 1
+                p_goban = init_aray()
+                c_truc = 1
+                ech = 0
 	    	end
 	    end
-	    if (c_item % 2) == 1 then
+	    if c_truc == 1 and state ~= "menu" then
 			love.graphics.rectangle( "fill", 492, 460, 60, 25)
-	    	if love.keyboard.isDown('return') then
+	    	if love.keyboard.isDown('a') then
 	    		ech = 0
 	    	end
 		end
 	    love.graphics.setColor(255, 255, 255, 255)
-	end
 end
