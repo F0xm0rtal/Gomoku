@@ -9,7 +9,7 @@ function love.load()
     c_item = 1
     menus = {"Solo", "Duo", "Options", "Manual", "Exit"}
     ech = 0
-
+    imba = 0
     turn = 1
     --gamestate
     state = "menu"
@@ -97,7 +97,6 @@ function love.draw()
 end
 
 function echap()
-    for i=1,10 do
 	    love.graphics.setColor(255, 0, 0, 100)
 	    love.graphics.rectangle( "fill", 430, 430, 130, 60)
 	    love.graphics.setColor(255, 255, 255, 100)
@@ -124,5 +123,4 @@ function echap()
 	    	end
 		end
 	    love.graphics.setColor(255, 255, 255, 255)
-	end
 end

@@ -100,6 +100,7 @@ function judge(map, pos, x, y)
 	    end
 	    turn = turn + 1
 	else
+	    love.graphics.print("Imparable !\nMouvement\ninterdit !", 810, 500)
 	    p_goban[x][y] = 3
 	end
     end
