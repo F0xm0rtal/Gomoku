@@ -108,6 +108,7 @@ function Arbitre.Imparable(self, x, y)
 				p = p + 1
 			    end
 			    if p == 6 then
+				print "impa"
 				return "imparable"
 			    end
 			end
@@ -125,6 +126,7 @@ function Arbitre.Imparable(self, x, y)
 				p = p + 1
 			    end
 			    if p == 4 then
+				print "impa"
 				return "imparable"
 			    end
 			end
@@ -142,6 +144,7 @@ function Arbitre.Imparable(self, x, y)
 				p = p + 1
 			    end
 			    if p == 4 then
+				print "impa"
 				return "imparable"
 			    end
 			end
@@ -160,6 +163,7 @@ function Arbitre.Imparable(self, x, y)
 				p = p + 1
 			    end
 			    if p == 4 then
+				print "impa"
 				return "imparable"
 			    end
 			end
@@ -177,6 +181,7 @@ function Arbitre.Imparable(self, x, y)
 				p = p + 1
 			    end
 			    if p == 4 then
+				print "impa"
 				return "imparable"
 			    end
 			end

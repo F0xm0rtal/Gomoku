@@ -1,6 +1,5 @@
 
 function opt_draw()
-	echap()
 
 	--option son + mod épilepsie 
 	love.graphics.setFont(love.graphics.newFont(42))
@@ -13,7 +12,6 @@ function opt_draw()
 end
 
 function manu_draw()
-	echap()
 	-- #LE_MANUEL
 	love.graphics.setFont(love.graphics.newFont(42))
 	love.graphics.print("PRINCIPES DE BASE\n", 50, 50)

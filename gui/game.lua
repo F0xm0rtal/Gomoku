@@ -1,6 +1,5 @@
 
 function game_draw()
-    echap()
 
     -- coord mouse
     mx, my = love.mouse.getPosition()
