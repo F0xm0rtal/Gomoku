@@ -91,6 +91,9 @@ function love.draw()
     elseif state == "manual" then
 		manu_draw()
     end
+    if ech == 1 then
+        echap()
+    end
 end
 
 function echap()
