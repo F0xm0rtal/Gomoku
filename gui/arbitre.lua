@@ -101,6 +101,7 @@ function Arbitre.Imparable(self, x, y)
     if self.field[x][y] == 3 then
 	for i = -1, 1, 1 do
 	    for j = -1, 1, 1 do
+		--cas
 		p = 0
 		for c = 1, 4, 1 do
 		    if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
@@ -117,10 +118,41 @@ function Arbitre.Imparable(self, x, y)
 			end
 		    end
 		end
-	    end
-	end
-	for i = -1, 1, 1 do
-	    for j = -1, 1, 1 do
+		--cas
+		p = 0
+		for c = 1, 3, 1 do
+		    if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
+			if i ~= x and j ~= y then
+			    if c ~= 4 and self.field[x + c * i][y + c * j] == turn % 2 + 1 then
+				p = p + 1
+			    end
+			    if c == 4 and self.field[x + c * i][y + c * j] == 3 then
+				p = p + 1
+			    end
+			    if p == 4 then
+				return "imparable"
+			    end
+			end
+		    end
+		end
+		--cas
+		p = 0
+		for c = 1, 3 ,3 do
+		    if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
+			if i ~= x and j ~= y then
+			    if c ~= 4 and self.field[x + c * i][y + c * j] == turn % 2 + 1 then
+				p = p + 1
+			    end
+			    if c == 4 and self.field[x + c * i][y + c * j] == 3 then
+				p = p + 1
+			    end
+			    if p == 4 then
+				return "imparable"
+			    end
+			end
+		    end
+		end
+		--cas
 		p = 0
 		for c = 1, 5, 1 do
 		    if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
@@ -132,6 +164,40 @@ function Arbitre.Imparable(self, x, y)
 				p = p + 1
 			    end
 			    if p == 5 then
+				return "imparable"
+			    end
+			end
+		    end
+		end
+		--cas
+		p = 0
+		for c = 1, 3, 1 do
+		    if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
+			if i ~= x and j ~= y then
+			    if c ~= 4 and self.field[x + c * i][y + c * j] == turn % 2 + 1 then
+				p = p + 1
+			    end
+			    if c == 4 and self.field[x + c * i][y + c * j] == 3 then
+				p = p + 1
+			    end
+			    if p == 4 then
+				return "imparable"
+			    end
+			end
+		    end
+		end
+		--cas
+		p = 0
+		for c = 1, 3, 1 do 
+		    if x + c * i < 18 and x + c * i > 0 and y + c * j < 18 and y + c * j > 0 then 
+			if i ~= x and j ~= y then
+			    if c ~= 4 and self.field[x + c * i][y + c * j] == turn % 2 + 1 then
+				p = p + 1
+			    end
+			    if c == 4 and self.field[x + c * i][y + c * j] == 3 then
+				p = p + 1
+			    end
+			    if p == 4 then
 				return "imparable"
 			    end
 			end
