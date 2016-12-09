@@ -15,7 +15,7 @@ function love.load()
     turn = 1
     
     --modes
-    mode_impa = true
+    mode_impa = false
     mode_break = false
     
     --gamestate
@@ -23,6 +23,7 @@ function love.load()
 
     --plateau de jeux
     p_goban = init_aray()
+    score = {0, 0}
 
     --images
     i_glados = love.graphics.newImage("img/glados.png")
@@ -36,6 +37,7 @@ function love.load()
     fo_titre = love.graphics.newFont('img/terminal_ldr.ttf', 72)
     
     --text
+    s_score = "init_score"
     s_player = "init_glados"
     s_turn = "init_cake"
     s_win = "init_win"

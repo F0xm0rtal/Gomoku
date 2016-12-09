@@ -29,6 +29,7 @@ function Arbitre.Prise(self, x, y)
 			    self.field[x + i][y + j] = 3
 			    self.field[x + 2 * i][y + 2 * j] = 3
 			    prise = true
+			    score[turn % 2 + 1] = score[turn % 2 + 1] + 2
 			end
 		    end
 		end
