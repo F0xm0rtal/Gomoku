@@ -13,6 +13,11 @@ function love.load()
     ech = 0
     imba = 0
     turn = 1
+    
+    --modes
+    mode_impa = true
+    mode_break = false
+    
     --gamestate
     state = "menu"
 

@@ -85,11 +85,12 @@ function judge(map, pos, x, y)
 	end
 
 	--check impa
-	for i = 1, 17, 1 do
-	    for j = 1, 17, 1 do
-		if arb:Imparable(x,y) == "imparable" then
-		    print ("imparable")
-		    impa = 1
+	if mode_impa then
+	    for i = 1, 17, 1 do
+		for j = 1, 17, 1 do
+		    if arb:Imparable(x,y) == "imparable" then
+			impa = 1
+		    end
 		end
 	    end
 	end
