@@ -90,6 +90,7 @@ function love.keypressed(k)
         turn = 1
         p_goban = init_aray()
         c_truc = 1
+	score = {0, 0}
         ech = 0
     elseif k == 'c' then
 		cake = not cake

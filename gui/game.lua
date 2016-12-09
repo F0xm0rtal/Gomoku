@@ -22,7 +22,7 @@ function game_draw()
 	love.graphics.line(50+i, 50, 50+i, 770)
     end
     s_score = s_score.format("%s %u %s %u", "Prises \nJ1 ", score[1], "\nJ2 ", score[2])
-    love.graphics.print(s_score, 810, 150)
+    love.graphics.print(s_score, 810, 100)
     for e=1,17 do
 	for i=1,17 do
 	    if p_goban[e][i] == 1 then
@@ -100,6 +100,7 @@ function judge(map, pos, x, y)
 	    arb:Prise(x, y)
 	    if score[turn % 2 + 1] >= 10 then
 		win = true
+		turn = turn - 1
 	    end
 	    if arb:Align(x, y) == "win" then
 		win = true
