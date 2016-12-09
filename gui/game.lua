@@ -1,7 +1,6 @@
-require '../IA/MinMax'
-function game_draw()
-    echap()
 
+function game_draw()
+    love.graphics.setFont(fo_menu)
     -- coord mouse
     mx, my = love.mouse.getPosition()
     love.graphics.print(mx, 10, 800)
@@ -14,7 +13,7 @@ function game_draw()
     love.graphics.print(s_player, 800, 25)
 
     --mouse trigger
-    pos_tab(mx, my)
+    pos_tab(mx, my) 
 
     --draw plateau
     love.graphics.draw(i_goban, 30, 50, 0, 0.3, 0.45)
@@ -22,6 +21,8 @@ function game_draw()
 	love.graphics.line(50, 50+i, 770, 50+i)
 	love.graphics.line(50+i, 50, 50+i, 770)
     end
+    s_score = s_score.format("%s %u %s %u", "Prises \nJ1 ", score[1], "\nJ2 ", score[2])
+    love.graphics.print(s_score, 810, 150)
     for e=1,17 do
 	for i=1,17 do
 	    if p_goban[e][i] == 1 then
@@ -33,7 +34,12 @@ function game_draw()
     end
 
     if cake then
-	love.graphics.print( "The cake is a lie.", 800, 200)
+	love.graphics.print( "The cake is a lie.", 810, 200)
+    end
+
+    if win then
+	s_win = s_win.format("%s %u %s","Player", (turn % 2 + 1), "win !")
+	love.graphics.print(s_win, 810, 300)
     end
 
 end
@@ -56,9 +62,9 @@ function pos_tab(x, y)
 	for i=1, 17, 1 do
 	    for e=1,17 do
 		if x >= 80 + 40 * (i-1) and x <= 120 + 40 * (i-1) and y >= 80 + 40 * (e-1) and y <= 120 + 40 * (e-1) then
-		    judge(p_goban, p_goban[e][i], e, i)
-        add_Histo_tab(e,i,(turn % 2) + 1)
-        prise_IA(9,9)
+		    if win == false then
+			judge(p_goban, p_goban[e][i], e, i)
+		    end
 		end
 	    end
 	end
@@ -71,8 +77,8 @@ function judge(map, pos, x, y)
     if pos == 3 then
 	p_goban[x][y] = turn % 2 + 1
 	for i= -1, 1, 1 do
-	    for j = -1 , 1, 1 do
-		if x + i < 18 and x + i > 0 and y + j < 18 and y + j > 0 then
+	    for j = -1 , 1, 1 do 
+		if x + i < 18 and x + i > 0 and y + j < 18 and y + j > 0 then 
 		    if p_goban[x+i][y+j] == 0 then
 			p_goban[x+i][y+j] = 3
 		    end
@@ -81,19 +87,26 @@ function judge(map, pos, x, y)
 	end
 
 	--check impa
-	for i = 1, 17, 1 do
-	    for j = 1, 17, 1 do
-		if arb:Imparable(x,y) == "imparable" then
-		    print ("imparable")
-		    impa = 1
+	if mode_impa then
+	    for i = 1, 17, 1 do
+		for j = 1, 17, 1 do
+		    if arb:Imparable(x,y) == "imparable" then
+			impa = 1
+		    end
 		end
 	    end
 	end
 	if impa == 0 then
 	    arb:Prise(x, y)
-	    arb:Align(x, y)
+	    if score[turn % 2 + 1] >= 10 then
+		win = true
+	    end
+	    if arb:Align(x, y) == "win" then
+		win = true
+	    end
 	    turn = turn + 1
 	else
+	    love.graphics.print("Imparable !\nMouvement\ninterdit !", 810, 500)
 	    p_goban[x][y] = 3
 	end
     end
