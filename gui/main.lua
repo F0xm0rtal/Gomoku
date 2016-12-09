@@ -3,6 +3,7 @@ require "game"
 require "opt_manu"
 require "../IA/MinMax"
 
+
 function love.load()
     --variables
     c_menu = 1
