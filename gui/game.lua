@@ -11,9 +11,11 @@ function game_draw()
     s_turn = s_turn.format("%s %u", "Turn ", turn)
     love.graphics.print(s_turn, 800, 5)
     love.graphics.print(s_player, 800, 25)
-
+    
     --mouse trigger
-    pos_tab(mx, my) 
+    if pos_tab(mx, my) == "played" and mode_IA then
+	play_IA()
+    end
 
     --draw plateau
     love.graphics.draw(i_goban, 30, 50, 0, 0.3, 0.45)
@@ -22,7 +24,7 @@ function game_draw()
 	love.graphics.line(50+i, 50, 50+i, 770)
     end
     s_score = s_score.format("%s %u %s %u", "Prises \nJ1 ", score[1], "\nJ2 ", score[2])
-    love.graphics.print(s_score, 810, 150)
+    love.graphics.print(s_score, 810, 100)
     for e=1,17 do
 	for i=1,17 do
 	    if p_goban[e][i] == 1 then
@@ -41,6 +43,7 @@ function game_draw()
 	s_win = s_win.format("%s %u %s","Player", (turn % 2 + 1), "win !")
 	love.graphics.print(s_win, 810, 300)
     end
+
 
 end
 
@@ -100,6 +103,7 @@ function judge(map, pos, x, y)
 	    arb:Prise(x, y)
 	    if score[turn % 2 + 1] >= 10 then
 		win = true
+		turn = turn - 1
 	    end
 	    if arb:Align(x, y) == "win" then
 		win = true

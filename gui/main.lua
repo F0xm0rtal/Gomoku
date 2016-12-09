@@ -19,7 +19,7 @@ function love.load()
     --modes
     mode_impa = false
     mode_break = false
-    
+    mode_IA = false
     --gamestate
     state = "menu"
 
@@ -92,6 +92,7 @@ function love.keypressed(k)
         turn = 1
         p_goban = init_aray()
         c_truc = 1
+	score = {0, 0}
         ech = 0
     elseif k == 'c' then
 		cake = not cake
@@ -113,6 +114,7 @@ function love.draw()
     elseif state == "game" and ech == 0 then
 		game_draw()
     elseif state == "game2" and ech == 0 then
+		mode_IA = true
 		game_draw()
     elseif state == "option" and ech == 0 then
 		opt_draw()
