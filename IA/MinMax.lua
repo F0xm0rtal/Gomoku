@@ -50,13 +50,14 @@ end
 function play_IA()
 	strongx, strongy = bring_me_the_strongest()
 	print(x, y)
+	prise_IA(strongx, strongy)
 
 end
 
 function bring_me_the_strongest()
 	i = 1
 	while l do
-		if (l.value.value > i) then
+		if (l.value.value >= i) then
 			i = l.value.value
 			posx = l.value.x
 			posy = l.value.y

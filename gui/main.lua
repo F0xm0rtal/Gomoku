@@ -2,6 +2,7 @@ require "menu"
 require "game"
 require "opt_manu"
 require "../IA/MinMax"
+require "arbitre"
 
 
 function love.load()
