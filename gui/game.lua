@@ -11,9 +11,11 @@ function game_draw()
     s_turn = s_turn.format("%s %u", "Turn ", turn)
     love.graphics.print(s_turn, 800, 5)
     love.graphics.print(s_player, 800, 25)
-
+    
     --mouse trigger
-    pos_tab(mx, my) 
+    if pos_tab(mx, my) == "played" and mode_IA then
+	play_IA()
+    end
 
     --draw plateau
     love.graphics.draw(i_goban, 30, 50, 0, 0.3, 0.45)
@@ -41,6 +43,7 @@ function game_draw()
 	s_win = s_win.format("%s %u %s","Player", (turn % 2 + 1), "win !")
 	love.graphics.print(s_win, 810, 300)
     end
+
 
 end
 
