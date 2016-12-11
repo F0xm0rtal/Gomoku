@@ -14,7 +14,7 @@ function game_draw()
     
     --mouse trigger
     if pos_tab(mx, my) == "played" and mode_IA then
-	play_IA()
+		play_IA()
     end
 
     --draw plateau
@@ -62,16 +62,17 @@ end
 
 function pos_tab(x, y)
     if love.mouse.isDown(1) then
-	for i=1, 17, 1 do
-	    for e=1,17 do
-		if x >= 80 + 40 * (i-1) and x <= 120 + 40 * (i-1) and y >= 80 + 40 * (e-1) and y <= 120 + 40 * (e-1) then
-		    if win == false then
-			judge(p_goban, p_goban[e][i], e, i)
+		for i=1, 17, 1 do
+		    for e=1,17 do
+				if x >= 80 + 40 * (i-1) and x <= 120 + 40 * (i-1) and y >= 80 + 40 * (e-1) and y <= 120 + 40 * (e-1) then
+			    	if win == false then
+						return (judge(p_goban, p_goban[e][i], e, i))
+			    	end
+				end
 		    end
 		end
-	    end
-	end
     end
+    return "nil"
 end
 
 function judge(map, pos, x, y)
@@ -112,6 +113,9 @@ function judge(map, pos, x, y)
 	else
 	    love.graphics.print("Imparable !\nMouvement\ninterdit !", 810, 500)
 	    p_goban[x][y] = 3
+	    return "nil"
 	end
     end
+    add_Histo_tab(x, y, turn % 2 + 1)
+    return "played"
 end

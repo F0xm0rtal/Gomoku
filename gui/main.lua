@@ -19,7 +19,7 @@ function love.load()
     --modes
     mode_impa = false
     mode_break = false
-    mode_IA = false
+    mode_IA = true
     --gamestate
     state = "menu"
 
