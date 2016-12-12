@@ -116,6 +116,5 @@ function judge(map, pos, x, y)
 	    return "nil"
 	end
     end
-    add_Histo_tab(x, y, turn % 2 + 1)
     return "played"
 end

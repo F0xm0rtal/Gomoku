@@ -1,105 +1,43 @@
-l = nil
+function init_prise_liste(x, y)
+	list_prise = nil
+	list_prise = { x1 = x + 1, y1 = y, x2 = x + 2, y2 = y, x3 = x + 3, y3 = y,
+	 next = list_prise }
+	list_prise = { x1 = x, y1 = y + 1, x2 = x, y2 = y + 2, x3 = x, y3 = y + 3,
+	 next = list_prise }
+	list_prise = { x1 = x - 1, y1 = y, x2 = x - 2, y2 = y, x3 = x - 3, y3 = y,
+	  next = list_prise }
+	list_prise = { x1 = x, y1 = y - 1, x2 = x, y2 = y - 2, x3 = x, y3 = y - 3,
+	   next = list_prise }
+	list_prise = { x1 = x + 1, y1 = y + 1, x2 = x + 2, y2 = y + 2, x3 = x + 3, y3 = y + 3,
+	   next = list_prise }
+	list_prise = { x1 = x - 1, y1 = y - 1, x2 = x - 2, y2 = y - 2, x3 = x - 3, y3 = y - 3,
+	   next = list_prise }
+	list_prise = { x1 = x + 1, y1 = y - 1, x2 = x + 2, y2 = y - 2, x3 = x + 3, y3 = y - 3,
+	   next = list_prise }
+	list_prise = { x1 = x - 1, y1 = y + 1, x2 = x - 2, y2 = y + 2, x3 = x - 3, y3 = y + 3,
+	   next = list_prise }
 
--- function init_prise_liste(x, y)
--- 	list_prise = nil
--- 	list_prise = { x1 = x + 1, y1 = y, x2 = x + 2, y2 = y, x3 = x + 3, y3 = y,
--- 	 next = list_prise }
--- 	list_prise = { x1 = x, y1 = y + 1, x2 = x, y2 = y + 2, x3 = x, y3 = y + 3,
--- 	 next = list_prise }
--- 	list_prise = { x1 = x - 1, y1 = y, x2 = x - 2, y2 = y, x3 = x - 3, y3 = y,
--- 	  next = list_prise }
--- 	list_prise = { x1 = x, y1 = y - 1, x2 = x, y2 = y - 2, x3 = x, y3 = y - 3,
--- 	   next = list_prise }
--- 	list_prise = { x1 = x + 1, y1 = y + 1, x2 = x + 2, y2 = y + 2, x3 = x + 3, y3 = y + 3,
--- 	   next = list_prise }
--- 	list_prise = { x1 = x - 1, y1 = y - 1, x2 = x - 2, y2 = y - 2, x3 = x - 3, y3 = y - 3,
--- 	   next = list_prise }
--- 	list_prise = { x1 = x + 1, y1 = y - 1, x2 = x + 2, y2 = y - 2, x3 = x + 3, y3 = y - 3,
--- 	   next = list_prise }
--- 	list_prise = { x1 = x - 1, y1 = y + 1, x2 = x - 2, y2 = y + 2, x3 = x - 3, y3 = y + 3,
--- 	   next = list_prise }
-
--- 	return list_prise
--- end
-
-function list_first_lvl(x, y)
-	list_first_lvl = {next = list_first_lvl, pos = {x, y}}
-	for i = -1, 1, 1 do
-		for e = -1, 1, 1 do
-			if x + e < 18 and x + e > 0 and y + i < 18 and y + i > 0 then
-				if p_goban[x + e][y + i] == 1 or p_goban[x + e][y + i] == 2 then
-					list_first_lvl.x = x + e
-					list_first_lvl.y = y + i
-				end
-			end
-		end
-	end
-	return list_first_lvl
-end
-
-function list_secund_lvl(x, y)
-	list_secund_lvl = {next = list_secund_lvl, pos = {x, y}}
-	for i = -2, 1, 2 do
-		for e = -2, 1, 2 do
-			if x + e < 18 and x + e > 0 and y + i < 18 and y + i > 0 then
-				if p_goban[x + e][y + i] == 1 or p_goban[x + e][y + i] == 2 then
-					list_secund_lvl.x = x + e
-					list_secund_lvl.y = y + i
-				end
-			end
-		end
-	end
-	return list_secund_lvl
-end
-
-function list_third_lvl(x, y)
-	list_third_lvl = {next = list_third_lvl, pos = {x, y}}
-	for i = -3, 1, 3 do
-		for e = -3, 1, 3 do
-			if x + e < 18 and x + e > 0 and y + i < 18 and y + i > 0 then
-				if p_goban[x + e][y + i] == 1 or p_goban[x + e][y + i] == 2 then
-					list_third_lvl.x = x + e
-					list_third_lvl.y = y + i
-				end
-			end
-		end
-	end
-	return list_third_lvl
+	return list_prise
 end
 
 function prise_IA(x,y)
 
-list_first_lvl = list_first_lvl(x, y)
-list_secund_lvl = list_secund_lvl(x, y)
-list_third_lvl = list_third_lvl(x, y)
+	list_prise = init_prise_liste(x,y)
+	return_list = nil
+	while list_prise do
 
-if list_third_lvl ~= nil then
-while list_third_lvl do
-	print(list_third_lvl.x, list_third_lvl.y)
-	list_third_lvl = list_third_lvl.next
-end
-end
+		if list_prise.x1 < 18 and list_prise.y1 < 18 and list_prise.x1 > 0  and list_prise.y1 > 0 and list_prise.x2 < 18 and list_prise.y2 < 18 and list_prise.x2 > 0 and list_prise.y2 > 0 then
 
-if list_secund_lvl ~= nil then
-while list_secund_lvl do
-	print(list_secund_lvl.x, list_secund_lvl.y)
-	list_secund_lvl = list_first_lvl.next
-end
-end
-
-if list_first_lvl ~= nil then
-while list_first_lvl do
-	print(list_first_lvl.x, list_first_lvl.y)
-	list_first_lvl = list_first_lvl.next
-end
-end
-
-IA_tab(9, 10)
-
-end
-
-function reval()
-	
+			if p_goban[list_prise.x1][list_prise.y1] == 2 and p_goban[list_prise.x2][list_prise.y2] == 2 then
+				if  list_prise.x3 < 18 and list_prise.y3 < 18 and list_prise.x3 > 0 and list_prise.y3 > 0  and p_goban[list_prise.x3][list_prise.y3] == 3 then
+					print("prise", list_prise.x3, list_prise.y3)
+					return_list = {x = list_prise.x3, y = list_prise.y3 , next = return_list }
+				end
+			end
+		end
+		list_prise = list_prise.next
+	end
+	return return_list
 end
 
 function IA_tab(x, y)
@@ -113,30 +51,39 @@ end
 --main de l'ia
 
 function play_IA()
-	strongx, strongy = bring_me_the_strongest()
-	print(strongx, strongy)
-	prise_IA(strongx, strongy)
-	--strongx, strongy = prise_IA(strongx, strongy)
+	played = 666
+	for i=1, 17, 1 do
+		for e=1, 17, 1 do
+      		if p_goban[e][i] == 1 then
+      			print(e,i)
+      			list = prise_IA(e, i)
+      			if list ~= nil then
+      				IA_tab(list.x, list.y)
+      				played = 1
+      				break
+      			end
+      		end
+      		-- if p_goban[e][i] == 3 then
+      		-- 	IA_tab(e, i)
+      		-- end
+    	end
+  	end
+  	if played ~= 1 then
 
+  		if p_goban[12][10] == 1 or p_goban[12][10] == 2 then
+  			IA_tab(13, 10)
+  		end
+  		if p_goban[11][10] == 1 or p_goban[11][10] == 2 then
+  			IA_tab(12, 10)
+  		end
+  		if p_goban[10][10] == 1 or p_goban[10][10] == 2 then
+  			IA_tab(11, 10)
+  		end
+  		if p_goban[9][10] == 1 or p_goban[9][10] == 2 then
+  			IA_tab(10, 10)
+  		end
+  		IA_tab(9, 10)
+  	end
 end
 
 --historique des coups joués
-
-function add_Histo_tab( e, i, turn)
-	l = { next = l, value = { x = e, y = i, value = 1 , player = turn }}
-end
-
---récupère la pièce à fort potentiel
-
-function bring_me_the_strongest()
-	i = 1
-	while l do
-		if (l.value.value >= i) then
-			i = l.value.value
-			posx = l.value.x
-			posy = l.value.y
-		end
-		l = l.next
-	end
-	return posx, posy
-end
