@@ -11,7 +11,7 @@ function game_draw()
     s_turn = s_turn.format("%s %u", "Turn ", turn)
     love.graphics.print(s_turn, 800, 5)
     love.graphics.print(s_player, 800, 25)
-    
+
     --mouse trigger
     if pos_tab(mx, my) == "played" and mode_IA then
 		play_IA()
@@ -61,17 +61,19 @@ function init_aray()
 end
 
 function pos_tab(x, y)
-    if love.mouse.isDown(1) then
-		for i=1, 17, 1 do
-		    for e=1,17 do
-				if x >= 80 + 40 * (i-1) and x <= 120 + 40 * (i-1) and y >= 80 + 40 * (e-1) and y <= 120 + 40 * (e-1) then
-			    	if win == false then
-						return (judge(p_goban, p_goban[e][i], e, i))
-			    	end
-				end
+    if love.mouse.isDown(1) and click == 1 then
+        click = 2
+		    for i=1, 17, 1 do
+		        for e=1,17 do
+				          if x >= 80 + 40 * (i-1) and x <= 120 + 40 * (i-1) and y >= 80 + 40 * (e-1) and y <= 120 + 40 * (e-1) then
+			    	          if win == false then
+						            return (judge(p_goban, p_goban[e][i], e, i))
+			    	          end
+                  end
+            end
 		    end
-		end
     end
+
     return "nil"
 end
 
@@ -81,8 +83,8 @@ function judge(map, pos, x, y)
     if pos == 3 then
 	p_goban[x][y] = turn % 2 + 1
 	for i= -1, 1, 1 do
-	    for j = -1 , 1, 1 do 
-		if x + i < 18 and x + i > 0 and y + j < 18 and y + j > 0 then 
+	    for j = -1 , 1, 1 do
+		if x + i < 18 and x + i > 0 and y + j < 18 and y + j > 0 then
 		    if p_goban[x+i][y+j] == 0 then
 			p_goban[x+i][y+j] = 3
 		    end

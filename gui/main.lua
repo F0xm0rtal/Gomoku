@@ -15,7 +15,8 @@ function love.load()
     ech = 0
     imba = 0
     turn = 1
-    
+    click = nil
+
     --modes
     mode_impa = false
     mode_break = false
@@ -33,11 +34,11 @@ function love.load()
     i_goban = love.graphics.newImage("img/aperture-laboratories-terminal.jpg")
     i_white = love.graphics.newImage("img/white.png")
     i_black = love.graphics.newImage("img/black.png")
-    
+
     --font
     fo_menu = love.graphics.newFont('img/terminal_ldr.ttf', 28)
     fo_titre = love.graphics.newFont('img/terminal_ldr.ttf', 72)
-    
+
     --text
     s_score = "init_score"
     s_player = "init_glados"
@@ -143,4 +144,14 @@ function echap()
 			love.graphics.rectangle( "fill", 492, 460, 60, 25)
 	    end
 	    love.graphics.setColor(255, 255, 255, 255)
+end
+
+
+function love.mousepressed(x, y, button)
+  click = 1
+end
+
+
+function love.mousereleased(x, y, button)
+  click = nil
 end
