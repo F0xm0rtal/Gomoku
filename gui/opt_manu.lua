@@ -3,8 +3,45 @@ function opt_draw()
 	--option son + mod épilepsie 
 	love.graphics.setFont(love.graphics.newFont(42))
 	love.graphics.print("OPTI0N", 50, 50)
-	love.graphics.setFont(love.graphics.newFont(12))
-	s_main:setVolume(0.9)
+	love.graphics.setFont(love.graphics.newFont(15))
+	
+	love.graphics.setColor(128, 128, 128, 255)
+	if c_veux == 1 then
+		love.graphics.rectangle("fill", 80, 150, 100, 20)
+	end
+	if c_veux == 2 then
+		love.graphics.rectangle("fill", 80, 200, 100, 20)
+	end
+	if c_veux == 3 then
+		love.graphics.rectangle("fill", 80, 250, 100, 20)
+	end
+	if c_veux == 0 then
+		love.graphics.rectangle("fill", 80, 300, 100, 20)
+	end
+	love.graphics.setColor(255, 255, 255, 100)
+
+	love.graphics.rectangle("line", 50, 150, 10, 10)
+	love.graphics.print("3 imparable", 80, 150)
+	if mode_impa == true then
+		love.graphics.print("x", 50, 145)
+	end
+	love.graphics.rectangle("line", 50, 200, 10, 10)
+	love.graphics.print("Prise des 5", 80, 200)
+	if mode_break == true then
+		love.graphics.print("x", 50, 195)
+	end
+	love.graphics.rectangle("line", 50, 250, 10, 10)
+	love.graphics.print("option inutile", 80, 250)
+	if opt_inu == true then
+		love.graphics.print("x", 50, 245)
+	end
+	love.graphics.rectangle("line", 50, 300, 10, 10)
+	love.graphics.print("epi", 80, 300)
+	if opt_epi == true then
+		love.graphics.print("x", 50, 295)
+	end
+
+	-- s_main:setVolume(0.9)
 	if love.keyboard.isDown('space') then
 		opt = "epi"
 	end

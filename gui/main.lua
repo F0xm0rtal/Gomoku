@@ -10,6 +10,7 @@ function love.load()
 	c_menu = 1
 	c_item = 1
 	c_truc = 1
+	c_veux = 1
 	menus = { "Solo", "Duo", "Options", "Manual", "Exit" }
 	opt_menu = { "menu", "game", "game2", "option", "manual" }
 	ech = 0
@@ -21,6 +22,8 @@ function love.load()
 	mode_impa = false
 	mode_break = false
 	mode_IA = true
+	opt_inu = false
+	opt_epi = false
 	--gamestate
 	state = "menu"
 	
@@ -59,7 +62,7 @@ function love.load()
 	-- f_game:write("")
 	-- f_game:close()
 	
-	--s_main:play()
+	s_main:play()
 end
 
 function love.keypressed(k)
@@ -77,6 +80,12 @@ function love.keypressed(k)
 	elseif k == 'right' then
 		c_truc = c_truc + 1
 		c_truc = c_truc % 2
+	elseif k == 'up' and state == "option" then
+		c_veux = c_veux - 1
+		c_veux = c_veux % 4
+	elseif k == 'down' and state == "option" then
+		c_veux = c_veux + 1
+		c_veux = c_veux % 4
 	elseif k == 'up' and state == "menu" then
 		c_item = c_item - 1
 		c_item = c_item % 5
@@ -85,6 +94,22 @@ function love.keypressed(k)
 		c_item = c_item % 5
 	elseif k == 'return' and state == "menu" then
 		state = opt_menu[c_item + 1]
+	elseif k == 'return' and state == "option" and c_veux == 1 and mode_impa == false and ech == 0 then
+		mode_impa = true
+	elseif k == 'return' and state == "option" and c_veux == 2 and mode_break == false and ech == 0 then
+		mode_break = true
+	elseif k == 'return' and state == "option" and c_veux == 3 and opt_inu == false and ech == 0 then
+		opt_inu = true
+	elseif k == 'return' and state == "option" and c_veux == 0 and opt_epi == false and ech == 0 then
+		opt_epi = true
+	elseif k == 'return' and state == "option" and c_veux == 1 and mode_impa == true and ech == 0 then
+		mode_impa = false
+	elseif k == 'return' and state == "option" and c_veux == 2 and mode_break == true and ech == 0 then
+		mode_break = false
+	elseif k == 'return' and state == "option" and c_veux == 3 and opt_inu == true and ech == 0 then
+		opt_inu = false
+	elseif k == 'return' and state == "option" and c_veux == 0 and opt_epi == true and ech == 0 then
+		opt_epi = false
 	elseif k == 'return' and ech == 1 and c_truc == 1 then
 		ech = 0
 	elseif k == 'return' and ech == 1 and c_truc == 0 then
