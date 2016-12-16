@@ -49,6 +49,7 @@ function love.load()
 	s_win = "init_win"
 	cake = false
 	win = false
+	playao = 0
 	--sound
 	s_main = love.audio.newSource("sound/Portal_2_Soundtrack_-_The_Main_Menu.ogg")
 	
