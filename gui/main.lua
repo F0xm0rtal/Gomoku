@@ -1,9 +1,9 @@
 require "menu"
 require "game"
 require "opt_manu"
-require "../IA/MinMax"
+require "MinMax"
 require "arbitre"
-require "../IA/List"
+require "List"
 
 function love.load()
 	--variables
