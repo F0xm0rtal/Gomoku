@@ -77,6 +77,8 @@ end
 function judge(map, pos, x, y)
     impa = 0
     arb = Arbitre.create(turn, map)
+    --local a, p, n = Arbeit.Result(map, x, y, turn)
+    --print (a,"align", p, "prise", n, "time")
     if pos == 3 then
         p_goban[x][y] = turn % 2 + 1
         for i = -1, 1, 1 do

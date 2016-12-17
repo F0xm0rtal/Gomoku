@@ -4,6 +4,7 @@ require "opt_manu"
 require "MinMax"
 require "arbitre"
 require "List"
+require "arbeit"
 
 function love.load()
 	--variables
