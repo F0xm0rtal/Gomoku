@@ -4,6 +4,7 @@ require "opt_manu"
 require "MinMax"
 require "arbitre"
 require "List"
+require "IA2"
 
 function love.load()
 	--variables

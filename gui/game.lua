@@ -114,8 +114,8 @@ function judge(map, pos, x, y)
             p_goban[x][y] = 3
             return "nil"
         end
-                list_historique:insert({ x = x, y = y, joueur = p_goban[x][y] })
-
+        list_historique:insert({ x = x, y = y, joueur = p_goban[x][y] })
+        my_minmax()
         return "played"
     end
     return "nil"
