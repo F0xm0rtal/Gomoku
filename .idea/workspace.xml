@@ -10,23 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d791b193-d0d3-473b-a65d-cffd921ca40b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IA/List.lua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IA/MinMax.lua" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Gomoku.iml" afterPath="$PROJECT_DIR$/.idea/Gomoku.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/arbitre.lua" afterPath="$PROJECT_DIR$/gui/arbitre.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/conf.lua" afterPath="$PROJECT_DIR$/gui/conf.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/IA2.lua" afterPath="$PROJECT_DIR$/gui/IA2.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/arbeit.lua" afterPath="$PROJECT_DIR$/gui/arbeit.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/game.lua" afterPath="$PROJECT_DIR$/gui/game.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/main.lua" afterPath="$PROJECT_DIR$/gui/main.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/menu.lua" afterPath="$PROJECT_DIR$/gui/menu.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/opt_manu.lua" afterPath="$PROJECT_DIR$/gui/opt_manu.lua" />
     </list>
     <ignored path="Gomoku.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,8 +38,8 @@
       <file leaf-file-name="arbitre.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui/arbitre.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="1710">
+              <caret line="95" column="3" lean-forward="true" selection-start-line="95" selection-start-column="3" selection-end-line="95" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -60,9 +48,12 @@
       <file leaf-file-name="game.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui/game.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="116" column="47" lean-forward="true" selection-start-line="116" selection-start-column="47" selection-end-line="116" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="1710">
+              <caret line="121" column="21" lean-forward="false" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
+              <folding>
+                <element signature="n#pos_tab#0" expanded="false" />
+                <marker date="1482109819955" expanded="false" signature="1498:1671" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,19 +61,69 @@
       <file leaf-file-name="IA2.lua" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gui/IA2.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <folding>
+                <element signature="n#my_rec#0" expanded="false" />
+                <element signature="n#generate_map#0" expanded="false" />
+                <element signature="n#init_from_histo#0" expanded="false" />
+                <element signature="n#fill_map#0" expanded="false" />
+                <element signature="n#generate#0" expanded="false" />
+                <element signature="n#generate2#0" expanded="false" />
+                <element signature="n#print_t#0" expanded="false" />
+                <element signature="n#print_listia#0" expanded="false" />
+                <element signature="n#print_map#0" expanded="false" />
+                <element signature="n#list_clear#0" expanded="false" />
+                <element signature="n#get_best_score#0" expanded="false" />
+                <element signature="n#get_worse_score#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="List.lua" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gui/List.lua">
+      <file leaf-file-name="arbeit.lua" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/arbeit.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="54">
+              <caret line="3" column="39" lean-forward="false" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+              <folding>
+                <element signature="n#Arbeit.Prise#0" expanded="false" />
+                <element signature="n#Arbeit.Align#0" expanded="false" />
+                <element signature="n#Arbeit.Result#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MinMax.lua" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/MinMax.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-111">
+              <caret line="257" column="11" lean-forward="true" selection-start-line="257" selection-start-column="11" selection-end-line="257" selection-end-column="11" />
+              <folding>
+                <element signature="n#init_prise_liste#0" expanded="false" />
+                <element signature="e#70#211#1" expanded="false" />
+                <element signature="e#229#370#1" expanded="false" />
+                <element signature="e#388#529#1" expanded="false" />
+                <element signature="e#547#688#1" expanded="false" />
+                <element signature="e#706#859#1" expanded="false" />
+                <element signature="e#877#1030#1" expanded="false" />
+                <element signature="e#1048#1201#1" expanded="false" />
+                <element signature="e#1219#1372#1" expanded="false" />
+                <element signature="n#init_prise_liste2#0" expanded="false" />
+                <element signature="e#1491#1606#1" expanded="false" />
+                <element signature="e#1630#1757#1" expanded="false" />
+                <element signature="e#1781#1896#1" expanded="false" />
+                <element signature="e#1920#2047#1" expanded="false" />
+                <element signature="e#2071#2186#1" expanded="false" />
+                <element signature="e#2211#2338#1" expanded="false" />
+                <element signature="e#2363#2478#1" expanded="false" />
+                <element signature="e#2503#2630#1" expanded="false" />
+                <element signature="n#prise_IA#0" expanded="false" />
+                <element signature="n#blockcquage_victoire_IA#0" expanded="false" />
+                <element signature="n#align_IA#0" expanded="false" />
+                <element signature="n#search_axe#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,8 +131,8 @@
       <file leaf-file-name="main.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui/main.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="156" column="16" lean-forward="false" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
+            <state relative-caret-position="288">
+              <caret line="155" column="3" lean-forward="true" selection-start-line="155" selection-start-column="3" selection-end-line="155" selection-end-column="3" />
               <folding>
                 <element signature="n#love.load#0" expanded="false" />
                 <element signature="n#love.keypressed#0" expanded="false" />
@@ -105,7 +146,34 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="List.lua" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/List.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>list_prise</find>
+      <find>play_IA</find>
+      <find>rec</find>
+      <find>size</find>
+      <find>print</find>
+      <find>best</find>
+      <find>list_clear</find>
+      <find>prise</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>e</replace>
+      <replace>it</replace>
+      <replace>worse</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -126,6 +194,7 @@
         <option value="$PROJECT_DIR$/gui/arbitre.lua" />
         <option value="$PROJECT_DIR$/IA/IA2.lua" />
         <option value="$PROJECT_DIR$/gui/main.lua" />
+        <option value="$PROJECT_DIR$/gui/arbeit.lua" />
         <option value="$PROJECT_DIR$/gui/game.lua" />
         <option value="$PROJECT_DIR$/gui/IA2.lua" />
       </list>
@@ -138,7 +207,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1985" />
+    <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="1855" />
     <option name="height" value="1056" />
@@ -186,8 +255,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -692,15 +761,16 @@
       <workItem from="1481983617422" duration="664000" />
       <workItem from="1481988412721" duration="35000" />
       <workItem from="1481988469071" duration="5333000" />
+      <workItem from="1482078700521" duration="39210000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40143000" />
+    <option name="totallyTimeSpent" value="79353000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1985" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -708,31 +778,63 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32212028" sideWeight="0.50213444" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32212028" sideWeight="0.50213444" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24905661" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3340564" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.49786553" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.49786553" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32212028" sideWeight="0.50213444" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3340564" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.49786553" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -750,18 +852,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gui/menu.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gui/opt_manu.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -769,14 +864,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua" />
     <entry file="file://$PROJECT_DIR$/gui/arbitre.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -789,7 +877,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2088">
           <caret line="116" column="7" lean-forward="false" selection-start-line="116" selection-start-column="7" selection-end-line="116" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="n#pos_tab#0" expanded="false" />
+            <marker date="1482109819955" expanded="false" signature="1498:1671" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -830,14 +921,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua" />
     <entry file="file://$PROJECT_DIR$/gui/main.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -879,7 +963,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="117" column="59" lean-forward="false" selection-start-line="117" selection-start-column="59" selection-end-line="117" selection-end-column="59" />
-          <folding />
+          <folding>
+            <element signature="n#pos_tab#0" expanded="false" />
+            <marker date="1482109819955" expanded="false" signature="1498:1671" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -891,22 +978,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="235" column="8" lean-forward="false" selection-start-line="235" selection-start-column="8" selection-end-line="235" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua" />
+    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua" />
     <entry file="file://$PROJECT_DIR$/gui/arbitre.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1692">
@@ -919,7 +992,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2106">
           <caret line="117" column="59" lean-forward="false" selection-start-line="117" selection-start-column="59" selection-end-line="117" selection-end-column="59" />
-          <folding />
+          <folding>
+            <element signature="n#pos_tab#0" expanded="false" />
+            <marker date="1482109819955" expanded="false" signature="1498:1671" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -960,14 +1036,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua" />
     <entry file="file://$PROJECT_DIR$/gui/arbitre.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1692">
@@ -980,7 +1049,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2106">
           <caret line="117" column="59" lean-forward="false" selection-start-line="117" selection-start-column="59" selection-end-line="117" selection-end-column="59" />
-          <folding />
+          <folding>
+            <element signature="n#pos_tab#0" expanded="false" />
+            <marker date="1482109819955" expanded="false" signature="1498:1671" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1021,14 +1093,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua" />
     <entry file="file://$PROJECT_DIR$/gui/arbitre.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -1041,7 +1106,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2088">
           <caret line="116" column="7" lean-forward="false" selection-start-line="116" selection-start-column="7" selection-end-line="116" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="n#pos_tab#0" expanded="false" />
+            <marker date="1482109819955" expanded="false" signature="1498:1671" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1082,14 +1150,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua" />
     <entry file="file://$PROJECT_DIR$/gui/menu.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1104,22 +1165,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5634">
-          <caret line="313" column="0" lean-forward="false" selection-start-line="313" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IA/List.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/IA/MinMax.lua" />
+    <entry file="file://$PROJECT_DIR$/IA/List.lua" />
     <entry file="file://$PROJECT_DIR$/gui/conf.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1127,18 +1174,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IA/IA2.lua">
+    <entry file="file://$PROJECT_DIR$/IA/IA2.lua" />
+    <entry file="file://$PROJECT_DIR$/gui/List.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        <state relative-caret-position="142">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/main.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="156" column="16" lean-forward="false" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
+        <state relative-caret-position="288">
+          <caret line="155" column="3" lean-forward="true" selection-start-line="155" selection-start-column="3" selection-end-line="155" selection-end-column="3" />
           <folding>
             <element signature="n#love.load#0" expanded="false" />
             <element signature="n#love.keypressed#0" expanded="false" />
@@ -1151,43 +1199,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/MinMax.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="78" column="9" lean-forward="false" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gui/arbitre.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui/List.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        <state relative-caret-position="1710">
+          <caret line="95" column="3" lean-forward="true" selection-start-line="95" selection-start-column="3" selection-end-line="95" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/game.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="116" column="47" lean-forward="true" selection-start-line="116" selection-start-column="47" selection-end-line="116" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="1710">
+          <caret line="121" column="21" lean-forward="false" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
+          <folding>
+            <element signature="n#pos_tab#0" expanded="false" />
+            <marker date="1482109819955" expanded="false" signature="1498:1671" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/MinMax.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="257" column="11" lean-forward="true" selection-start-line="257" selection-start-column="11" selection-end-line="257" selection-end-column="11" />
+          <folding>
+            <element signature="n#init_prise_liste#0" expanded="false" />
+            <element signature="e#70#211#1" expanded="false" />
+            <element signature="e#229#370#1" expanded="false" />
+            <element signature="e#388#529#1" expanded="false" />
+            <element signature="e#547#688#1" expanded="false" />
+            <element signature="e#706#859#1" expanded="false" />
+            <element signature="e#877#1030#1" expanded="false" />
+            <element signature="e#1048#1201#1" expanded="false" />
+            <element signature="e#1219#1372#1" expanded="false" />
+            <element signature="n#init_prise_liste2#0" expanded="false" />
+            <element signature="e#1491#1606#1" expanded="false" />
+            <element signature="e#1630#1757#1" expanded="false" />
+            <element signature="e#1781#1896#1" expanded="false" />
+            <element signature="e#1920#2047#1" expanded="false" />
+            <element signature="e#2071#2186#1" expanded="false" />
+            <element signature="e#2211#2338#1" expanded="false" />
+            <element signature="e#2363#2478#1" expanded="false" />
+            <element signature="e#2503#2630#1" expanded="false" />
+            <element signature="n#prise_IA#0" expanded="false" />
+            <element signature="n#blockcquage_victoire_IA#0" expanded="false" />
+            <element signature="n#align_IA#0" expanded="false" />
+            <element signature="n#search_axe#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/arbeit.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="39" lean-forward="false" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+          <folding>
+            <element signature="n#Arbeit.Prise#0" expanded="false" />
+            <element signature="n#Arbeit.Align#0" expanded="false" />
+            <element signature="n#Arbeit.Result#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/IA2.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="270">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="n#my_rec#0" expanded="false" />
+            <element signature="n#generate_map#0" expanded="false" />
+            <element signature="n#init_from_histo#0" expanded="false" />
+            <element signature="n#fill_map#0" expanded="false" />
+            <element signature="n#generate#0" expanded="false" />
+            <element signature="n#generate2#0" expanded="false" />
+            <element signature="n#print_t#0" expanded="false" />
+            <element signature="n#print_listia#0" expanded="false" />
+            <element signature="n#print_map#0" expanded="false" />
+            <element signature="n#list_clear#0" expanded="false" />
+            <element signature="n#get_best_score#0" expanded="false" />
+            <element signature="n#get_worse_score#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

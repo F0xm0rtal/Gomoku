@@ -13,7 +13,8 @@ function game_draw()
 
     --mouse trigger
     if pos_tab(mx, my) == "played" and mode_IA then
-        play_IA()
+        --        play_IA()
+        my_minmax()
     end
 
     --draw plateau
@@ -77,6 +78,8 @@ end
 function judge(map, pos, x, y)
     impa = 0
     arb = Arbitre.create(turn, map)
+    --local a, p, n = Arbeit.Result(map, x, y, turn)
+    --print (a,"align", p, "prise", n, "time")
     if pos == 3 then
         p_goban[x][y] = turn % 2 + 1
         for i = -1, 1, 1 do
@@ -115,7 +118,7 @@ function judge(map, pos, x, y)
             return "nil"
         end
         list_historique:insert({ x = x, y = y, joueur = p_goban[x][y] })
-        my_minmax()
+        --        my_minmax()
         return "played"
     end
     return "nil"
